@@ -19,19 +19,27 @@
         $cap = htmlspecialchars($_POST['cap']);
         $comune = htmlspecialchars($_POST['comune']);
         $provincia = htmlspecialchars($_POST['provincia']);
-        $nickname = htmlspecialchars($_POST['nickname']);
         $password = htmlspecialchars($_POST['password']);
 
-        echo "<p>Nome: $nome</p>";
-        echo "<p>Cognome: $cognome</p>";
-        echo "<p>Data di Nascita: $dataNascita</p>";
-        echo "<p>Codice Fiscale: $codiceFiscale</p>";
-        echo "<p>Email: $email</p>";
-        echo "<p>Cellulare: $cellulare</p>";
-        echo "<p>Indirizzo: $via, $cap, $comune, $provincia</p>";
-        echo "<p>Nickname: $nickname</p>";
-        echo "<p>Password: $password</p>";
-    }
+        // salvataggio
+        $file = "dati_login.txt"; 
+        $entry = "Email: $email, Password: $password\n";
+   
+        //creazione file
+        if (file_put_contents($file, $entry, FILE_APPEND)) {
+            //messaggio di registrazione avvenutoa
+            echo "<h3>Registrazione avvenuta con successo!</h3>";
+        } else {
+            // errore nel salvataggio
+            echo "<h3>Errore durante il salvataggio. Riprova più tardi.</h3>";
+        }
+        // ti manda al form
+        header("Refresh: 2; url=esa.html"); 
+        exit(); 
+        } else {
+        
+            echo "<h3>Accesso non autorizzato!</h3>";
+        }
     ?>
 </body>
 </html>

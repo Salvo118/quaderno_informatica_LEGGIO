@@ -11,8 +11,9 @@
 <body>
     <h3>Esercizio c - Stampare triangoli di asterischi</h3>
 
-    <p><strong>Schema (a):</strong></p>
+    
     <?php
+    // a
     for ($i = 1; $i <= 10; $i++) {
         for ($j = 1; $j <= $i; $j++) {
             echo '*';
@@ -21,8 +22,9 @@
     }
     ?>
 
-    <p><strong>Schema (b):</strong></p>
+
     <?php
+    //b
     for ($i = 10; $i >= 1; $i--) {
         for ($j = 1; $j <= $i; $j++) {
             echo '*';
@@ -31,8 +33,9 @@
     }
     ?>
 
-    <p><strong>Schema (c):</strong></p>
+    
     <?php
+    //c
     for ($i = 10; $i >= 1; $i--) {
         for ($j = 1; $j <= (10 - $i); $j++) {
             echo '&nbsp;';
@@ -44,8 +47,9 @@
     }
     ?>
 
-    <p><strong>Schema (d):</strong></p>
+    
     <?php
+    //d
     for ($i = 1; $i <= 10; $i++) {
         for ($j = 10; $j > $i; $j--) {
             echo '&nbsp;';

@@ -14,10 +14,10 @@
     
     <h3>Gestione Anagrafica Utenti</h3>
     <form action="process.php" method="post">
-        <label for="nome">Nome (obbligatorio, solo lettere e spazi):</label>
+        <label for="nome">Nome :</label>
         <input type="text" name="nome" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" required><br>
 
-        <label for="cognome">Cognome (obbligatorio, solo lettere, spazi e apostrofi):</label>
+        <label for="cognome">Cognome:</label>
         <input type="text" name="cognome" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s']+" required><br>
 
         <label for="dataNascita">Data di Nascita (obbligatorio):</label>
@@ -26,11 +26,9 @@
         <label for="codiceFiscale">Codice Fiscale (opzionale):</label>
         <input type="text" name="codiceFiscale"><br>
 
-        <label for="email">Email (obbligatoria):</label>
-        <input type="email" name="email" required><br>
-
-        <label for="cellulare">Cellulare (opzionale, 12 cifre):</label>
-        <input type="tel" name="cellulare" pattern="\d{12}"><br>
+        
+        <label for="cellulare">Cellulare :</label>
+        <input type="tel" name="cellulare" pattern="\d{10}"><br>
 
         <label for="indirizzo">Indirizzo (via/piazza, cap, comune, provincia):</label><br>
         <input type="text" name="via" placeholder="Via/Piazza" required><br>
@@ -38,8 +36,9 @@
         <input type="text" name="comune" required placeholder="Comune"><br>
         <input type="text" name="provincia" required placeholder="Provincia"><br>
 
-        <label for="nickname">Nickname (deve essere diverso da nome e cognome):</label>
-        <input type="text" name="nickname" required><br>
+        <label for="email">Email (obbligatoria):</label>
+        <input type="email" name="email" required><br>
+
 
         <label for="password">Password (maiuscola, numero, minimo 8 caratteri, carattere speciale):</label>
         <input type="password" name="password" pattern="(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" required><br>
